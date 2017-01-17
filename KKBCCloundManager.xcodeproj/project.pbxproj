@@ -14,6 +14,7 @@
 		810CE7641E288FFD00FBD24B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810CE7621E288FFD00FBD24B /* LaunchScreen.storyboard */; };
 		810CE76F1E288FFD00FBD24B /* KKBCCloundManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CE76E1E288FFD00FBD24B /* KKBCCloundManagerTests.swift */; };
 		810CE77A1E288FFD00FBD24B /* KKBCCloundManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CE7791E288FFD00FBD24B /* KKBCCloundManagerUITests.swift */; };
+		810CE78A1E28994100FBD24B /* TBMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CE7891E28994100FBD24B /* TBMediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		810CE7751E288FFD00FBD24B /* KKBCCloundManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKBCCloundManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		810CE7791E288FFD00FBD24B /* KKBCCloundManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKBCCloundManagerUITests.swift; sourceTree = "<group>"; };
 		810CE77B1E288FFD00FBD24B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		810CE7891E28994100FBD24B /* TBMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBMediator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				810CE7591E288FFD00FBD24B /* AppDelegate.swift */,
 				810CE75B1E288FFD00FBD24B /* ViewController.swift */,
+				810CE7871E28991200FBD24B /* BaseModule */,
 				810CE75D1E288FFD00FBD24B /* Main.storyboard */,
 				810CE7601E288FFD00FBD24B /* Assets.xcassets */,
 				810CE7621E288FFD00FBD24B /* LaunchScreen.storyboard */,
@@ -123,6 +126,22 @@
 				810CE77B1E288FFD00FBD24B /* Info.plist */,
 			);
 			path = KKBCCloundManagerUITests;
+			sourceTree = "<group>";
+		};
+		810CE7871E28991200FBD24B /* BaseModule */ = {
+			isa = PBXGroup;
+			children = (
+				810CE7881E28992000FBD24B /* Core */,
+			);
+			name = BaseModule;
+			sourceTree = "<group>";
+		};
+		810CE7881E28992000FBD24B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				810CE7891E28994100FBD24B /* TBMediator.swift */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810CE78A1E28994100FBD24B /* TBMediator.swift in Sources */,
 				810CE75C1E288FFD00FBD24B /* ViewController.swift in Sources */,
 				810CE75A1E288FFD00FBD24B /* AppDelegate.swift in Sources */,
 			);
@@ -410,9 +430,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KKBCCloundManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.psylife.KKBCCloundManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.p.KKBCCloundManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -422,9 +443,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KKBCCloundManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.psylife.KKBCCloundManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.p.KKBCCloundManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
