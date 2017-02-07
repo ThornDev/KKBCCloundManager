@@ -89,11 +89,82 @@ class ViewController: UIViewController {
         }
 //        Swift’s nil is not the same as nil in Objective-C. In Objective-C, nil is a pointer to a nonexistent object. 
 //        In Swift, nil is not a pointer—it is the absence of a value of a certain type. Optionals of any type can be set to nil, not just object types.
-        // If an implicitly unwrapped optional is nil and you try to access its wrapped value, you’ll trigger a runtime error. The result is exactly the same as if you place an exclamation mark after a normal optional that does not contain a value.
+//        If an implicitly unwrapped optional is nil and you try to access its wrapped value, you’ll trigger a runtime error.
+//        The result is exactly the same as if you place an exclamation mark after a normal optional that does not contain a value.
         // 不管是 显示Optional还是隐式的 一旦参数为空，如果强制解包那么会出发runtime error
         var surveyAnswer: String?
+        surveyAnswer = "survey"
+        print(surveyAnswer!)
+        
+//        Tuples are compared from left to right, one value at a time, until the comparison finds two values that aren’t equal.
+        if (1,"apple") < (1,"bird") {
+            print("yes")
+        }
+//        the operator is used to determine an initial value for a String variable called colorNameToUse.
+//        Because userDefinedColorName is nil, the expression userDefinedColorName ?? defaultColorName returns the value of defaultColorName, or "red".
+        let defaultColorName = "red"
+        var userDefinedColorName: String?
+        var colorNameToUse = userDefinedColorName ?? defaultColorName
+        userDefinedColorName = "green"
+        var colorName = userDefinedColorName ?? defaultColorName
+        // userDefineColorName is not nil, so colorNameToUse is set to "green"
+        print("\(colorNameToUse)  \(colorName)")
         
         
+        let count = 6
+        for i in 0...6 {
+            print(i)
+        }
+        
+        for i in 0..<count {
+            print(i)
+        }
+        
+        var shoppingList = ["Eggs","Milk"]
+        if shoppingList.isEmpty {
+            print("Empty")
+        }else{
+            print("Not Empty")
+        }
+        shoppingList.append("Flour")
+        shoppingList += ["Baking Powder"] // now shoppingList contains 4 items
+        shoppingList += ["Chocolate Spread","Cheese","Butter"] // now shoppingList contains 7 items
+        
+        for (index,value) in shoppingList.enumerated() {
+            print("Item: \(index+1):\(value)")
+        }
+        
+        let anotherCharacter: Character = "a"
+        switch anotherCharacter {
+        case "a","A":
+            print("the letter A")
+        default:
+            print("Not the letter A")
+        }
+        
+        let somePoint = (1,1)
+        switch somePoint {
+        case (0,0):
+            print("(0,0) is at the origin")
+        case (_,0):
+            print("(\(somePoint.0),0) is on the x-axis")
+        case (0,_):
+            print("(\(0,somePoint.1)) is on the y-axis")
+        case (-2...2,-2...2):
+            print("(\(somePoint.0),\(somePoint.1)) is inside the box")
+        default:
+            print("(\(somePoint.0),\(somePoint.1)) is outside of the box")
+        }
+        
+        
+    }
+    // a guard statement,like an if statement,executes statements depending on the Boolean
+    // value of an expression. You use a guard statement to requre that a condition must be true in order for
+    // the code after the guard statement to be executed. Unlike an if statement,a guard statement always has an else clause
+    func greet(person:[String: String]) {
+        guard person["name"] != nil else {
+            return
+        }
     }
     
     func greet(person: String, day: String) -> String {
